@@ -1,4 +1,4 @@
-# bibtex-duplicates-or-unused
+# bibtex-unused
 
 When you have a .bib file and you want to remove unused entries, check out:
 
