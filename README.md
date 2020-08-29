@@ -14,6 +14,7 @@ For `checkcites`, first download it into your CWD, next to your `main.tex` file:
 ```
 wget http://mirrors.ctan.org/support/checkcites.zip
 unzip checkcites.zip
+```
 
 Then, build your LaTeX code, which will generate a `main.aux` file:
 
