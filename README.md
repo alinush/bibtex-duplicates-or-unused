@@ -65,3 +65,15 @@ grep 'citation' *.aux | cut -f 2 -d'{' | tr -d '}'  | tr ',' '\n' | sort | uniq 
 ## Sorting .bib file and removing duplicates
 
 Go to [https://flamingtempura.github.io/bibtex-tidy/](https://flamingtempura.github.io/bibtex-tidy/).
+
+## Double-bracketing titles in .bib file
+
+Sometimes citation titles don't capitalize properly because the .bib file uses `title = {Bla La la Ba}` instead of `title = {{Bla La la Ba}}`.
+
+To add double brackets for everything, use:
+
+```
+gsed -e 's/.*title.*=.*{\([^}]*\)}.*/        title = {{\1}},/' sorted.bib >sorted2.bib
+```
+
+This seems to maintain the double brackets for entries which previously had them, which is good.
