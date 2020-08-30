@@ -61,3 +61,7 @@ chmod +x ./bibexport/bibexport.sh
 ```
 grep 'citation' *.aux | cut -f 2 -d'{' | tr -d '}'  | tr ',' '\n' | sort | uniq >citations.txt
 ```
+
+## Sorting .bib file and removing duplicates
+
+Go to [https://flamingtempura.github.io/bibtex-tidy/](https://flamingtempura.github.io/bibtex-tidy/).
