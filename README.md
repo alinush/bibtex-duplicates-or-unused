@@ -55,3 +55,9 @@ Then, run `bibexport` on your `main.aux` and export the used references to `used
 chmod +x ./bibexport/bibexport.sh
 ./bibexport/bibexport.sh -o used.bib main.aux
 ```
+
+## Printing used citation keys
+
+```
+grep 'citation' *.aux | cut -f 2 -d'{' | tr -d '}'  | tr ',' '\n' | sort | uniq >citations.txt
+```
