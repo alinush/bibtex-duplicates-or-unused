@@ -70,6 +70,8 @@ Go to [https://flamingtempura.github.io/bibtex-tidy/](https://flamingtempura.git
 
 Sometimes citation titles don't capitalize properly because the .bib file uses `title = {Bla La la Ba}` instead of `title = {{Bla La la Ba}}`.
 
+**WARNING:** This will **incorrectly** replace things like `{My {T}itle}` with `{{T}}` because of the greedy matching.
+
 To add double brackets for everything, use:
 
 ```
